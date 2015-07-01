@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @prayer_request.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @prayer_request.description %>
+</p>
+
+<%= link_to 'Edit', edit_prayer_request_path(@prayer_request) %> |
+<%= link_to 'Back', prayer_requests_path %>
