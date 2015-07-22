@@ -10,6 +10,14 @@
   <%= @user.email %>
 </p>
 
+<strong>Prayer Requests:</strong>
+<ul>
+  <% @user.prayer_requests.each do |prayer_request| %>
+    <li><%= link_to prayer_request.title, prayer_request %></li>
+  <% end %>
+</ul>
+
+
 <p>
   <strong>Password digest:</strong>
   <%= @user.password_digest %>

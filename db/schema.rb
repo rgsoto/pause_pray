@@ -11,14 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150706031248) do
+ActiveRecord::Schema.define(version: 20150722015043) do
 
   create_table "prayer_requests", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "user_id"
   end
+
+  add_index "prayer_requests", ["user_id"], name: "index_prayer_requests_on_user_id"
 
   create_table "prayers", force: :cascade do |t|
     t.datetime "created_at", null: false

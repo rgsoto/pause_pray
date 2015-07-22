@@ -69,6 +69,6 @@ class PrayerRequestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def prayer_request_params
-      params.require(:prayer_request).permit(:title, :description)
+      params.require(:prayer_request).permit(:title, :description, :user_id)
     end
 end
