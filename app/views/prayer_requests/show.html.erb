@@ -10,5 +10,10 @@
   <%= @prayer_request.description %>
 </p>
 
+<p>
+  <strong>Total Prayers:</strong>
+  <%= @prayer_request.prayers.count %>
+</p>
+
 <%= link_to 'Edit', edit_prayer_request_path(@prayer_request) %> |
 <%= link_to 'Back', prayer_requests_path %>
