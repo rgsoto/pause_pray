@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   has_many :prayer_requests
   has_many :prayers
   has_secure_password
-  validates: password, presence: true, length: {minimum: 6}
+  validates: password, presence: true, length: {minimum: 6 }
 end
 
 # from hartl book starting at 6.3 
