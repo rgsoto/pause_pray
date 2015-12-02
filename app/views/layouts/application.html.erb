@@ -68,7 +68,9 @@
               <li class="nav-header">Sidebar</li>
               <li><%= link_to "Profile", "/path1"  %></li>
               <li><%= link_to "Settings", "/path2"  %></li>
-              <li><%= link_to "Logout", logout_path, method: "delete" %></li>
+              <%- if current_user %>
+                <li><%= link_to "Logout", logout_path, method: "delete" %></li>
+              <%- end %>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
